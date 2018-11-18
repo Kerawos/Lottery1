@@ -12,11 +12,11 @@ public class Lottery {
         this.names = names;
     }
 
-    public String getLottery(String[] names){
+    public String getLottery(){
         Random rnd = new Random();
-        int lengthOfNames = names.length;
+        int lengthOfNames = this.names.length;
         int randowmNumber = rnd.nextInt(lengthOfNames);
-        return names[randowmNumber];
+        return this.names[randowmNumber];
     }
 
 }
