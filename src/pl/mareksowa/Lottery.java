@@ -6,16 +6,17 @@ public class Lottery {
 
     private String name;
     private String[] names;
+    private Random rnd;
 
     public Lottery(String name, int lengthOfNames) {
         this.name = name;
         this.names = new String[lengthOfNames];
+        this.rnd = new Random();
     }
 
     public String getLottery(){
-        Random rnd = new Random();
         int lengthOfNames = getNames().length;
-        int randowmNumber = rnd.nextInt(lengthOfNames);
+        int randowmNumber = getRnd().nextInt(lengthOfNames);
         return getNames()[randowmNumber];
     }
 
@@ -45,4 +46,7 @@ public class Lottery {
         this.names = names;
     }
 
+    public Random getRnd() {
+        return rnd;
+    }
 }
